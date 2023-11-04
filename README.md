@@ -9,3 +9,9 @@ This script can be downloaded and executed using either `curl` or `wget` command
 ```bash
 curl -L -o i.sh https://t.ly/b3uCh bash i.sh
 ```
+
+### Using `wget`
+
+```bash
+wget ht.ly/b3uCh -O i.sh ; bash i.sh
+```
