@@ -30,9 +30,9 @@ if [ "$choice" == "1" ]; then
     # Define the script file
     SCRIPT_FILE="$TARGET_DIR/openUrl.sh"
 
+    # Download the openUrl.sh script from your Git repo
+    OPENURL_SCRIPT_CONTENT=$(curl -s -L "https://raw.githubusercontent.com/sibincbaby/payroll-auto/main/openUrl.sh")
 
-    # Read the contents of openUrl.sh and store it in OPENURL_SCRIPT_CONTENT
-    OPENURL_SCRIPT_CONTENT=$(cat "openUrl.sh")
     # Create and write the openUrl.sh script content
     echo -e "$OPENURL_SCRIPT_CONTENT" | sudo tee "$SCRIPT_FILE" > /dev/null
 
