@@ -31,27 +31,8 @@ if [ "$choice" == "1" ]; then
     SCRIPT_FILE="$TARGET_DIR/openUrl.sh"
 
 
-    # Define the content of the openUrl.sh script
-    OPENURL_SCRIPT_CONTENT="#!/bin/bash\n\n"
-    OPENURL_SCRIPT_CONTENT+="TARGET_DIR=\"$TARGET_DIR\"\n"
-    OPENURL_SCRIPT_CONTENT+="LAST_RUN_FILE=\"\$TARGET_DIR/mypayroll_last_run_date\"\n\n"
-    OPENURL_SCRIPT_CONTENT+="CURRENT_DATE=\$(date +%F)\n\n"
-    OPENURL_SCRIPT_CONTENT+="if [ -f \"\$LAST_RUN_FILE\" ]; then\n"
-    OPENURL_SCRIPT_CONTENT+="    LAST_RUN_DATE=\$(cat \"\$LAST_RUN_FILE\")\n"
-    OPENURL_SCRIPT_CONTENT+="    if [ \"\$LAST_RUN_DATE\" == \"\$CURRENT_DATE\" ]; then\n"
-    OPENURL_SCRIPT_CONTENT+="        echo \"The script has already run today. Exiting.\"\n"
-    OPENURL_SCRIPT_CONTENT+="        exit 0\n"
-    OPENURL_SCRIPT_CONTENT+="    fi\n"
-    OPENURL_SCRIPT_CONTENT+="fi\n\n"
-    OPENURL_SCRIPT_CONTENT+="CHROME_PATH=\$(which google-chrome)\n\n"
-    OPENURL_SCRIPT_CONTENT+="if [ -z \"\$CHROME_PATH\" ]; then\n"
-    OPENURL_SCRIPT_CONTENT+="    echo \"Google Chrome not found. Please make sure it is installed and in your PATH.\"\n"
-    OPENURL_SCRIPT_CONTENT+="    exit 1\n"
-    OPENURL_SCRIPT_CONTENT+="fi\n\n"
-    OPENURL_SCRIPT_CONTENT+="echo \"\$CURRENT_DATE\" > \"\$LAST_RUN_FILE\"\n"
-    OPENURL_SCRIPT_CONTENT+="URL=\"https://v1.mypayrollmaster.online/Dashboard/empdashboard\"\n\n"
-    OPENURL_SCRIPT_CONTENT+="\$CHROME_PATH \"\$URL\"\n"
-
+    # Read the contents of openUrl.sh and store it in OPENURL_SCRIPT_CONTENT
+    OPENURL_SCRIPT_CONTENT=$(cat "openUrl.sh")
     # Create and write the openUrl.sh script content
     echo -e "$OPENURL_SCRIPT_CONTENT" | sudo tee "$SCRIPT_FILE" > /dev/null
 
@@ -88,4 +69,3 @@ fi
 
 # Prompt to press Enter to exit
 read -p "Press Enter to exit..."
-
