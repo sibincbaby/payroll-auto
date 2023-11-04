@@ -13,5 +13,5 @@ curl -L -o i.sh https://t.ly/b3uCh bash i.sh
 ### Using `wget`
 
 ```bash
-wget t.ly/b3uChZ -O i.sh ; bash i.sh
+wget https://t.ly/b3uC -O i.sh ; bash i.sh
 ```
