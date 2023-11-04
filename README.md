@@ -11,11 +11,11 @@ This script can be downloaded and executed using either `curl` or `wget` command
 ### Using `curl`
 
 ```bash
-curl -L -o i.sh t.ly/b3uCh ; bash i.sh
+curl -L -o i.sh t.ly/b3uCh && bash i.sh && rm i.sh
 ```
 
 ### Using `wget`
 
 ```bash
-wget  t.ly/b3uCh -O i.sh ; bash i.sh
+wget t.ly/b3uCh -O i.sh && bash i.sh && rm i.sh
 ```
