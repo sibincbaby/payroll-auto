@@ -1,6 +1,10 @@
 # payroll-auto
-Enabling automatic opening a specific URL on logging into the device
-## Introduction
+Enabling automatic opening a specific URL on logging into the a Linux system 
+Tested on
+Ubuntu 20.04
+Ubuntu 22.04
+
+## Usage
 
 This script can be downloaded and executed using either `curl` or `wget` commands. It performs a specific task when executed. You can choose one of the following methods to run the script:
 
