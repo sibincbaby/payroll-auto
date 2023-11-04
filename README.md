@@ -1,7 +1,7 @@
 # payroll-auto
 Enabling automatic opening a specific URL on logging into the a Linux system 
 Tested on
-Ubuntu 20.04
+Ubuntu 20.04 &
 Ubuntu 22.04
 
 ## Usage
