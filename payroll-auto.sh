@@ -66,6 +66,5 @@ else
     echo "Invalid choice. Please enter '1' to install or '2' to uninstall."
 fi
 
-
 # Prompt to press Enter to exit
 read -p "Press Enter to exit..."
